@@ -1,0 +1,30 @@
+INFO mlflow.pyfunc: This UDF will use conda to recreate the model's software environment for inference. This may take extra time during execution.
+WARNING mlflow.pyfunc: In order to run inference code in restored python environment, PySpark UDF processes spawn MLflow Model servers as child processes. Due to system limitations with handling SIGKILL signals, these MLflow Model server child processes cannot be cleaned up if the Spark Job is canceled.
+(...)
+INFO mlflow.utils.conda: === Creating conda environment /var/folders/b5/qvp0wvwn67q8ht58lg9hrnkm0000gn/T/tmpp2z_30lf/envs/conda_envs/mlflow-db9fa607051871bb7f6b695e255591c102fabe88-e8b92ad033c9dcb717eb5772f7cc659c98d91263 ===
+(...)
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Installing pip dependencies: ...working... done
+(...)
+INFO mlflow.pyfunc.scoring_server.client: Waiting for scoring to complete...
+(...)
+[model server] INFO:__main__:Loading model from /var/folders/b5/qvp0wvwn67q8ht58lg9hrnkm0000gn/T/tmpp2z_30lf/models/tmp0skayo1q
+[model server] INFO:__main__:Loaded model
+[model server] INFO:__main__:Waiting for request
+[model server] INFO:__main__:Received request
+[model server] INFO:__main__:Parsing input data
+[model server] INFO:__main__:Making predictions
+[model server] INFO:blog_post_mlflow_spark_udf.my_model.model:running pandas version: 1.2.5
+[model server] INFO:__main__:Writing predictions
+[model server] INFO:__main__:Done
++----+-----+----------+
+|  id|value|prediction|
++----+-----+----------+
+|id_1|    1|      10.0|
+|id_2|    2|      20.0|
+|id_3|    3|      30.0|
++----+-----+----------+
