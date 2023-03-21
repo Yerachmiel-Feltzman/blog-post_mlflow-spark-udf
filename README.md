@@ -5,6 +5,7 @@
 - Conda (tested with version 23.1.0)
 
 ### To reproduce the blog post workflow
+
 1. Install dependencies:
 
 ```
@@ -20,5 +21,11 @@ poetry run python workflow_examples/register_model.py
 3. Test inference with running environment and see the error:
 
 ```
-poetry run python workflow_examples/register_model.py
+poetry run python blog_post_mlflow_spark_udf/batch_predict.py "local" 
+```
+
+4. Test inference with isolated conda environment and see the result:
+
+```
+poetry run python blog_post_mlflow_spark_udf/batch_predict.py "conda" 
 ```
