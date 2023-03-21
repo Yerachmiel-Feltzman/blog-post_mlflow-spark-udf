@@ -10,6 +10,7 @@ packages = [{include = "blog_post_mlflow_spark_udf"}]
 python = "3.10.*"
 mlflow = "2.2.2"
 pyspark = "3.3.2"
+pandas = "1.5.3"
 llvmlite = "0.39.1" # added to avoid some weird issue with poetry trying to install older version than pip and breaking
 numba = "^0.56" # added to avoid some weird issue with poetry trying to install older version than pip and breaking
 
