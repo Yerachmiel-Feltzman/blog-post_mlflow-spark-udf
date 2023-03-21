@@ -1,0 +1,6 @@
+name: my-model-env
+channels:
+- conda-forge
+dependencies:
+- python >= 3.8,<=3.10
+- pandas = 1.2
